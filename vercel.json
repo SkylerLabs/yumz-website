@@ -4,11 +4,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
-  "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/system", "destination": "/index.html" },
-    { "source": "/system/:path*", "destination": "/index.html" }
+    { "source": "/system/:path*", "destination": "/" },
+    { "source": "/system", "destination": "/" }
   ],
   "headers": [
     {
