@@ -2,7 +2,9 @@
 
 Canonical marketing website for **Yumz** — yumz.social.
 
-**Live preview:** https://yumz-website.vercel.app
+**Production:** https://yumz.social (Vercel — skyler-labs-ai/yumz-website)
+**Vercel preview:** https://yumz-website.vercel.app
+**Webapp:** https://app.yumz.social (EC2 nginx — all CTAs route here)
 **GitHub:** https://github.com/SkylerLabs/yumz-website
 
 > Yumz is an AI food discovery app. Point your phone camera at any menu and instantly see every dish: AI-generated photos, calories, allergen flags, smart picks, and shareable food status.
