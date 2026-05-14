@@ -144,3 +144,4 @@ Visit `/system` locally (`npm run dev` → http://localhost:5173/system) to see 
 - `yumz-app` / `menu-vision` — canonical Yumz mobile app. **Do not modify from this project.**
 - Deprecated: legacy `yumz-website` / `yumz-landing` (dark-themed placeholders). Useful assets may be recovered as needed.
 
+
