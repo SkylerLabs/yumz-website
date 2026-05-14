@@ -53,9 +53,9 @@ export function Hero() {
             {/* Platform CTAs */}
             <div className="mt-9 flex flex-col items-stretch gap-3 sm:items-center sm:gap-3 lg:items-start">
               <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-                <AppStoreBadge href="https://yumz.social/app/" size="lg" />
+                <AppStoreBadge href="https://app.yumz.social" size="lg" />
                 <Button
-                  href="https://yumz.social/app/"
+                  href="https://app.yumz.social"
                   variant="secondary"
                   size="lg"
                   trailingIcon={<span aria-hidden>→</span>}

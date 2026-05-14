@@ -67,14 +67,14 @@ export function Nav() {
                 {link.label}
               </a>
             ))}
-            <Button href="https://yumz.social/app/" size="sm" className="ml-2">
+            <Button href="https://app.yumz.social" size="sm" className="ml-2">
               Try Yumz
             </Button>
           </div>
 
           {/* Mobile: CTA + hamburger */}
           <div className="flex items-center gap-2 md:hidden">
-            <Button href="https://yumz.social/app/" size="sm">
+            <Button href="https://app.yumz.social" size="sm">
               Try Yumz
             </Button>
             <button
@@ -137,7 +137,7 @@ export function Nav() {
             ))}
           </div>
           <Button
-            href="https://yumz.social/app/"
+            href="https://app.yumz.social"
             size="lg"
             block
             className="mt-4"

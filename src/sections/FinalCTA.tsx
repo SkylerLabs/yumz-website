@@ -45,9 +45,9 @@ export function FinalCTA() {
 
         <div className="mt-10 flex flex-col items-center gap-3">
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <AppStoreBadge href="https://yumz.social/app/" size="lg" />
+            <AppStoreBadge href="https://app.yumz.social" size="lg" />
             <Button
-              href="https://yumz.social/app/"
+              href="https://app.yumz.social"
               variant="inverse"
               size="lg"
               trailingIcon={<span aria-hidden>→</span>}

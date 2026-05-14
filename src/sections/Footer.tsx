@@ -2,7 +2,7 @@ import { Container } from "../components/ui/Container";
 import { LogoMark } from "../components/LogoMark";
 
 const NAV = [
-  { label: "Try Yumz", href: "https://yumz.social/app/" },
+  { label: "Try Yumz", href: "https://app.yumz.social" },
   { label: "Blog", href: "https://yumz.social/blog/" },
   { label: "Leaderboard", href: "https://yumz.social/leaderboard/" },
   { label: "YouTube", href: "https://www.youtube.com/@Yumz-SeeEatShare" },
