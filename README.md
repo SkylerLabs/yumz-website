@@ -2,6 +2,9 @@
 
 Canonical marketing website for **Yumz** — yumz.social.
 
+**Live preview:** https://yumz-website.vercel.app
+**GitHub:** https://github.com/SkylerLabs/yumz-website
+
 > Yumz is an AI food discovery app. Point your phone camera at any menu and instantly see every dish: AI-generated photos, calories, allergen flags, smart picks, and shareable food status.
 
 This repo houses the redesigned premium marketing site (Wave 1 scaffold). It is independent of the canonical app repo (`yumz-app` / `menu-vision`) — the app itself continues to be developed separately.
@@ -92,7 +95,8 @@ Design direction: **modern consumer AI · iPhone-first · social · motion-rich*
 | 2 | Design system + primitives (`/system` showcase) | ✅ Done |
 | 3 | Redesigned marketing sections (hero → footer) | ✅ Done |
 | 3.5 | Re-art direction — AI-native, iPhone-first, motion-rich | ✅ Done |
-| 4 | QA + Vercel preview launch | ⏳ Next |
+| 4 | Vercel preview launched · `yumz-website.vercel.app` | ✅ Done |
+| 5 | Production cutover (yumz.social DNS → Vercel) | ⏳ awaits explicit approval |
 
 ## Marketing sections (Wave 3)
 
