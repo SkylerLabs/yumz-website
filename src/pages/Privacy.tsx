@@ -56,12 +56,6 @@ export function Privacy() {
             <p className="mt-2 text-sm text-ink-500">
               Last updated: {LAST_UPDATED}
             </p>
-            <p className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-              <strong>Operational draft — pending final legal review.</strong>{" "}
-              This policy is published to support App Store submission and is
-              an honest account of how Yumz handles your data today. We will
-              update it as practices change.
-            </p>
 
             <Section title="In one paragraph">
               <p>
