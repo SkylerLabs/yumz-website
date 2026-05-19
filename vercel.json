@@ -7,7 +7,9 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/system/:path*", "destination": "/" },
-    { "source": "/system", "destination": "/" }
+    { "source": "/system", "destination": "/" },
+    { "source": "/privacy/:path*", "destination": "/" },
+    { "source": "/privacy", "destination": "/" }
   ],
   "headers": [
     {

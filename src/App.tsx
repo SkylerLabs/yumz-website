@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SystemShowcase } from "./pages/SystemShowcase";
+import { Privacy } from "./pages/Privacy";
 import {
   Allergens,
   Community,
@@ -20,9 +21,11 @@ import {
  *
  * Routes:
  *   /        → Home (full marketing site)
+ *   /privacy → Privacy policy (Wave K)
  *   /system  → SystemShowcase (design QA reference)
  *
- * Vercel SPA fallback in vercel.json ensures /system resolves on refresh.
+ * Vercel SPA fallback in vercel.json ensures /privacy and /system
+ * resolve on direct hit / refresh.
  */
 export function App() {
   const [pathname, setPathname] = useState(
@@ -35,10 +38,16 @@ export function App() {
     return () => window.removeEventListener("popstate", onPop);
   }, []);
 
-  if (pathname === "/system") {
+  // Normalize trailing slash so /privacy and /privacy/ both work — Apple
+  // submissions and external links sometimes include the slash.
+  const path = pathname.replace(/\/+$/, "") || "/";
+
+  if (path === "/privacy") {
+    return <Privacy />;
+  }
+  if (path === "/system") {
     return <SystemShowcase />;
   }
-
   return <Home />;
 }
 
