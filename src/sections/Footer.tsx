@@ -8,13 +8,12 @@ const NAV = [
   { label: "YouTube", href: "https://www.youtube.com/@Yumz-SeeEatShare" },
 ];
 
-// Wave K: point "Privacy" at the new in-house policy at /privacy. Terms
-// and Cookies still live on the SkylerLabs combined legal page until those
-// pages get their own Yumz-specific drafts.
+// Wave K: all three legal pages now live in-house at yumz.social. Previous
+// external links pointed at the placeholder skylerlabs.ai/legal page.
 const LEGAL = [
   { label: "Privacy", href: "/privacy" },
-  { label: "Terms", href: "https://skylerlabs.ai/legal.html#terms" },
-  { label: "Cookies", href: "https://skylerlabs.ai/legal.html#cookies" },
+  { label: "Terms", href: "/terms" },
+  { label: "Cookies", href: "/cookies" },
 ];
 
 export function Footer() {
