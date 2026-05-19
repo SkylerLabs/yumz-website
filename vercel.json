@@ -7,7 +7,13 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/system/:path*", "destination": "/" },
-    { "source": "/system", "destination": "/" }
+    { "source": "/system", "destination": "/" },
+    { "source": "/privacy/:path*", "destination": "/" },
+    { "source": "/privacy", "destination": "/" },
+    { "source": "/terms/:path*", "destination": "/" },
+    { "source": "/terms", "destination": "/" },
+    { "source": "/cookies/:path*", "destination": "/" },
+    { "source": "/cookies", "destination": "/" }
   ],
   "headers": [
     {

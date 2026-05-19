@@ -39,6 +39,28 @@
   }
 }
 
+@layer components {
+  /* Inline prose link — used inside long-form pages like /privacy. */
+  .link {
+    @apply text-ink-900 underline underline-offset-4 decoration-ink-300 hover:decoration-ink-700;
+  }
+
+  /* Prose styling for long-form pages (privacy, terms). Applied to a
+     wrapper div around <p>/<ul>/<h3> in policy sections. */
+  .prose-policy h3 {
+    @apply mt-6 font-display text-lg font-semibold text-ink-900;
+  }
+  .prose-policy p {
+    @apply text-ink-700;
+  }
+  .prose-policy ul {
+    @apply ml-5 list-disc space-y-1.5 text-ink-700;
+  }
+  .prose-policy a {
+    @apply text-ink-900 underline underline-offset-4 decoration-ink-300 hover:decoration-ink-700;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -69,7 +91,6 @@
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
-
   .glass-light {
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(14px);
