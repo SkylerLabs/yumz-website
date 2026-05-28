@@ -45,7 +45,15 @@ export function FinalCTA() {
 
         <div className="mt-10 flex flex-col items-center gap-3">
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <AppStoreBadge href="https://app.yumz.social" size="lg" />
+            <div className="flex flex-col items-center gap-1.5">
+              <AppStoreBadge
+                href="https://testflight.apple.com/join/aADUPecP"
+                size="lg"
+              />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-cream-100">
+                TestFlight beta · open
+              </span>
+            </div>
             <Button
               href="https://app.yumz.social"
               variant="inverse"

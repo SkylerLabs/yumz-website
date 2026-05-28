@@ -7,7 +7,6 @@ type Dish = {
   tag: string;
   tagTone: "hype" | "match" | "white";
   img: string;
-  match: number;
 };
 
 // Real Yumz AI-generated dish images, sourced from the canonical content
@@ -19,7 +18,6 @@ const DISHES: Dish[] = [
     cal: 480,
     tag: "👑 Main",
     tagTone: "white",
-    match: 96,
     img: "/dishes/filet-mignon-blue-cheese-salad.jpg",
   },
   {
@@ -28,7 +26,6 @@ const DISHES: Dish[] = [
     cal: 340,
     tag: "💪 Gym Mode",
     tagTone: "white",
-    match: 95,
     img: "/dishes/sesame-ahi-tuna-salad.jpg",
   },
   {
@@ -37,7 +34,6 @@ const DISHES: Dish[] = [
     cal: 290,
     tag: "💪 Gym Mode",
     tagTone: "white",
-    match: 93,
     img: "/dishes/thai-lime-prawn-soup.jpg",
   },
   {
@@ -46,7 +42,6 @@ const DISHES: Dish[] = [
     cal: 720,
     tag: "👑 Main",
     tagTone: "white",
-    match: 92,
     img: "/dishes/bison-burger.jpg",
   },
   {
@@ -55,7 +50,6 @@ const DISHES: Dish[] = [
     cal: 580,
     tag: "🔥 Trending",
     tagTone: "hype",
-    match: 91,
     img: "/dishes/boneless-wings.jpg",
   },
   {
@@ -64,7 +58,6 @@ const DISHES: Dish[] = [
     cal: 360,
     tag: "🌍 Local",
     tagTone: "white",
-    match: 90,
     img: "/dishes/ancho-chile-shrimp-tacos.jpg",
   },
   {
@@ -73,7 +66,6 @@ const DISHES: Dish[] = [
     cal: 320,
     tag: "✨ AI Pick",
     tagTone: "match",
-    match: 89,
     img: "/dishes/spinach-artichoke-dip.jpg",
   },
   {
@@ -82,7 +74,6 @@ const DISHES: Dish[] = [
     cal: 540,
     tag: "✨ AI Pick",
     tagTone: "match",
-    match: 88,
     img: "/dishes/chicken-florentine.jpg",
   },
   {
@@ -91,7 +82,6 @@ const DISHES: Dish[] = [
     cal: 410,
     tag: "🔥 Trending",
     tagTone: "hype",
-    match: 87,
     img: "/dishes/crunchy-onion-rings.jpg",
   },
   {
@@ -100,14 +90,14 @@ const DISHES: Dish[] = [
     cal: 640,
     tag: "🔥 Trending",
     tagTone: "hype",
-    match: 84,
     img: "/dishes/microbrew-battered-halibut.jpg",
   },
 ];
 
 /**
- * DishMarquee — oversized cinematic dish strip with AI overlays.
- * Edge-to-edge food photography, floating metadata, match scores, mood tags.
+ * DishMarquee — oversized cinematic dish strip.
+ * Edge-to-edge food photography, mood tags, calorie pills — all features the
+ * app actually surfaces. No fabricated match-% scores.
  * Continuous track loops at a slow pace; pauses on hover; respects reduced motion.
  */
 export function DishMarquee() {
@@ -168,24 +158,13 @@ function DishCard({ dish }: { dish: Dish }) {
           </span>
         </div>
 
-        {/* Bottom-overlay info */}
-        <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2">
-          <div className="min-w-0">
-            <div className="font-display text-lg font-bold leading-tight tracking-tight text-white">
-              {dish.name}
-            </div>
-            <div className="mt-0.5 text-[11px] font-medium text-white/80">
-              {dish.city}
-            </div>
+        {/* Bottom-overlay info — dish + city only (no match% — app doesn't surface that) */}
+        <div className="absolute inset-x-3 bottom-3">
+          <div className="font-display text-lg font-bold leading-tight tracking-tight text-white">
+            {dish.name}
           </div>
-          {/* Match badge */}
-          <div className="shrink-0 rounded-2xl bg-white/95 px-2 py-1 backdrop-blur">
-            <div className="text-[8px] font-bold uppercase tracking-wider text-match-600">
-              Match
-            </div>
-            <div className="font-mono text-sm font-bold tabular leading-none text-night-950">
-              {dish.match}%
-            </div>
+          <div className="mt-0.5 text-[11px] font-medium text-white/80">
+            {dish.city}
           </div>
         </div>
       </div>

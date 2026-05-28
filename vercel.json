@@ -5,6 +5,14 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/leaderboard", "destination": "https://app.yumz.social/leaderboard", "permanent": false },
+    { "source": "/leaderboard/", "destination": "https://app.yumz.social/leaderboard", "permanent": false },
+    { "source": "/leaderboard/:path*", "destination": "https://app.yumz.social/leaderboard/:path*", "permanent": false },
+    { "source": "/blog", "destination": "https://app.yumz.social/blog", "permanent": false },
+    { "source": "/blog/", "destination": "https://app.yumz.social/blog", "permanent": false },
+    { "source": "/blog/:path*", "destination": "https://app.yumz.social/blog/:path*", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/system/:path*", "destination": "/" },
     { "source": "/system", "destination": "/" },

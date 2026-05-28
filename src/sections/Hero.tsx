@@ -2,7 +2,6 @@ import { AppStoreBadge } from "../components/ui/AppStoreBadge";
 import { Button } from "../components/ui/Button";
 import { Eyebrow } from "../components/ui/Eyebrow";
 import { FloatingChip } from "../components/ui/FloatingChip";
-import { MatchBar } from "../components/ui/MatchBar";
 import { PhoneMockup } from "../components/ui/PhoneMockup";
 import { Pill } from "../components/ui/Pill";
 
@@ -53,7 +52,15 @@ export function Hero() {
             {/* Platform CTAs */}
             <div className="mt-9 flex flex-col items-stretch gap-3 sm:items-center sm:gap-3 lg:items-start">
               <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-                <AppStoreBadge href="https://app.yumz.social" size="lg" />
+                <div className="flex flex-col items-center gap-1.5 lg:items-start">
+                  <AppStoreBadge
+                    href="https://testflight.apple.com/join/aADUPecP"
+                    size="lg"
+                  />
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-600">
+                    TestFlight beta · open
+                  </span>
+                </div>
                 <Button
                   href="https://app.yumz.social"
                   variant="secondary"
@@ -111,23 +118,7 @@ function HeroPhone() {
         <HeroAppScene />
       </PhoneMockup>
 
-      {/* Floating chips — orbiting AI signals */}
-      <FloatingChip
-        tone="match"
-        float="a"
-        className="absolute -left-2 top-16 sm:-left-8"
-      >
-        <span aria-hidden>✓</span> Match 94%
-      </FloatingChip>
-
-      <FloatingChip
-        tone="hype"
-        float="b"
-        className="absolute -right-3 top-32 sm:-right-8 sm:top-28"
-      >
-        <span aria-hidden>🔥</span> Trending in Dubai
-      </FloatingChip>
-
+      {/* Floating chips — only features the app actually ships */}
       <FloatingChip
         tone="white"
         float="c"
@@ -200,19 +191,13 @@ function HeroAppScene() {
             </div>
           </div>
 
-          <div className="space-y-2 px-3.5 py-3">
-            <div className="flex items-center justify-between">
-              <div className="font-display text-[15px] font-bold leading-tight text-ink-900">
-                Sesame Ahi Tuna Salad
-              </div>
-              <div className="font-mono text-[11px] font-semibold tabular text-match-600">
-                95%
-              </div>
+          <div className="space-y-1.5 px-3.5 py-3">
+            <div className="font-display text-[15px] font-bold leading-tight text-ink-900">
+              Sesame Ahi Tuna Salad
             </div>
             <div className="text-[11px] text-ink-500">
               Seared ahi · sesame crust · ginger lime
             </div>
-            <MatchBar value={95} size="sm" showLabel={false} />
           </div>
         </div>
       </div>
@@ -238,10 +223,8 @@ function HeroAppScene() {
             </div>
           </div>
           <div className="text-right">
-            <div className="font-mono text-[10px] font-semibold tabular text-match-600">
-              93%
-            </div>
-            <div className="text-[9px] text-ink-400">290 cal</div>
+            <div className="text-[10px] font-semibold tabular text-ink-700">290 cal</div>
+            <div className="text-[9px] text-ink-400">low cal</div>
           </div>
         </div>
       </div>

@@ -246,7 +246,7 @@ export function SystemShowcase() {
             <IconBadge tone="soft" size="md">
               📖
             </IconBadge>
-            <h3 className="mt-5 text-xl">Swipe Mode</h3>
+            <h3 className="mt-5 text-xl">Easy Reading</h3>
             <p className="mt-2 text-ink-600">
               Tiny fonts, bad lighting, foreign languages — menus become clean,
               readable cards.

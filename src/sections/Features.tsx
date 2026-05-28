@@ -17,8 +17,8 @@ type Feature = {
 const FEATURES: Feature[] = [
   {
     icon: "📖",
-    title: "Swipe Mode",
-    body: "Tiny fonts, bad lighting, foreign languages — menus become clean, swipeable cards you can read at a glance.",
+    title: "Easy Reading",
+    body: "Tiny fonts, bad lighting, foreign languages — every dish becomes one clean, large-format card you can actually read.",
     hero: true,
   },
   {
@@ -118,19 +118,21 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
           </div>
           <h3 className="mt-6 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             {feature.title}{" "}
-            <span className="text-brand-400">for easy menu reading.</span>
+            <span className="text-brand-400">
+              for menus that don&rsquo;t read easy.
+            </span>
           </h3>
           <p className="mt-3 max-w-md text-cream-200">
-            Tiny fonts, bad lighting, foreign languages — menus become clean,
-            swipeable cards. Great for travel, dim restaurants, and anyone who
-            just wants less friction ordering food.
+            Tiny fonts, bad lighting, foreign languages — every dish becomes
+            one clean, large-format card. Built for travel, dim restaurants,
+            and anyone who just wants less friction ordering food.
           </p>
-          {/* Mini preview of the mode */}
+          {/* Mini preview of the mode — dish + price + AI Pick (matches app) */}
           <div className="mt-7 grid grid-cols-2 gap-2 sm:grid-cols-3">
             {[
-              { name: "Truffle Rigatoni", price: "$26", match: 94 },
-              { name: "Burrata Salad", price: "$18", match: 88 },
-              { name: "Branzino", price: "$34", match: 82 },
+              { name: "Truffle Rigatoni", price: "$26", pick: true },
+              { name: "Burrata Salad", price: "$18", pick: false },
+              { name: "Branzino", price: "$34", pick: false },
             ].map((m) => (
               <div
                 key={m.name}
@@ -139,9 +141,13 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
                 <div className="text-[11px] font-bold text-white">{m.name}</div>
                 <div className="mt-1 flex items-center justify-between">
                   <span className="text-[10px] text-cream-300">{m.price}</span>
-                  <span className="font-mono text-[10px] font-bold tabular text-match-400">
-                    {m.match}%
-                  </span>
+                  {m.pick ? (
+                    <span className="text-[9px] font-bold uppercase tracking-wider text-match-400">
+                      ✨ AI Pick
+                    </span>
+                  ) : (
+                    <span className="text-[9px] text-cream-300">—</span>
+                  )}
                 </div>
               </div>
             ))}
